@@ -2,3 +2,6 @@ alias examples="uv run examples/create_jobs.py"
 alias build="uv build"
 alias publish="uv publish"
 alias opt="uv run opt" 
+
+alias setdev="export MATHOPT_ENV=dev"
+alias setprod="export MATHOPT_ENV=prod"
