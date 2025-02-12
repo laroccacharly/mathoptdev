@@ -1,5 +1,5 @@
 import mathoptdev as opt
-from mathoptdev import CreateJobsRequest, InstanceStrategyPair
+from mathoptdev.types import CreateJobsRequest, InstanceStrategyPair
 
 instance_data = opt.queries.get_instances()
 strategy_data = opt.queries.get_strategies()

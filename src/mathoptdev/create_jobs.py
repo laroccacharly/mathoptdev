@@ -1,12 +1,5 @@
-import pydantic 
 from .send_request import send_request
-
-class InstanceStrategyPair(pydantic.BaseModel):
-    instance_id: str
-    strategy_id: str
-
-class CreateJobsRequest(pydantic.BaseModel):
-    instance_strategy_pairs: list[InstanceStrategyPair]
+from .types import CreateJobsRequest
 
 def create_jobs(request: CreateJobsRequest) -> dict:
     pairs = request.instance_strategy_pairs
