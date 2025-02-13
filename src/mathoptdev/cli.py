@@ -67,6 +67,15 @@ def delete_all():
     }
     send_request(body)
 
+@cli.group()
+def solution():
+    pass
+
+@solution.command()
+def list():
+    data = q.get_solutions()
+    pretty_log(data)
+
 @cli.command()
 @click.option('-c', '--num-cities', type=int, default=5, help='Number of cities in the TSP instance')
 def tsp(num_cities): 

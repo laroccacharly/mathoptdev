@@ -23,3 +23,9 @@ def get_user():
         "action": "get_user"
     }
     return send_request(body)   
+
+def get_solutions():
+    body = {
+        "action": "get_solutions"
+    }
+    return send_request(body)
