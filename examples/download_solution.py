@@ -2,6 +2,8 @@ import mathoptdev as opt
 
 solution_data = opt.queries.get_solutions()
 solutions = solution_data['solutions']
+# sort by created_at (latest first)
+solutions.sort(key=lambda x: x['created_at'], reverse=True)
 first_solution = solutions[0]
 
 solution_id = first_solution['id']
