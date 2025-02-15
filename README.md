@@ -38,31 +38,43 @@ opt user
 ```
 
 # Create problem instances 
-To get you stated, we provide a helper command to generate Travelling Sallesman Problems (TSP). 
+To get you stated, we provide the following helper command which generates Travelling Sallesman Problems (TSP). 
 
 ```
 opt tsp -c 5 
 ```
-where the option `-c` corresponds to the number of cities in the problem. The MPS file is saved in the tsp folder in the current directory. 
+The option `-c` corresponds to the number of cities in the problem. The MPS file is saved in the tsp folder in the current directory. 
 
 After generating a few instances, upload them to the server with the following command: 
 ```
 opt instance create tsp 
 ```
-You can query the database with 
+To verify if we successfully processed your instances, you can query the database with the command
 ```
 opt instance list 
-```
-or 
-
-```
+# or 
 import mathoptdev as opt 
 opt.queries.get_instances() 
 ```
-to verify if we successfully processed your instances. 
 
 # Solve instances 
-To solve an instance, you need to provide its id and the id of the strategy you want to use to solve it. 
+To solve an instance, you need to create a job with its id and the id of the strategy you want to use to solve it. 
 
-See the following example: 
+The list of available strategies can be queried with 
+```
+opt strategy list 
+```
+
+We provide an example on how to create and queue a set of jobs in these script: 
 [examples/create_jobs.py](examples/create_jobs.py)
+[examples/queue_jobs.py](examples/queue_jobs.py)
+
+# Get results and solutions 
+You can monitor you jobs with 
+```
+opt job list 
+# or 
+import mathoptdev as opt 
+opt.queries.get_jobs() 
+```
+
