@@ -53,20 +53,6 @@ def list():
     data = q.get_jobs()
     pretty_log(data)
 
-@job.command()
-def run():
-    body = {
-        "action": "run_all_pending_jobs"
-    }
-    send_request(body)
-
-@job.command()
-def delete_all():
-    body = {
-        "action": "delete_jobs"
-    }
-    send_request(body)
-
 @cli.group()
 def solution():
     pass
