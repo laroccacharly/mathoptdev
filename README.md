@@ -87,8 +87,8 @@ opt strategy list
 ```
 
 We provide an example on how to create and queue a set of jobs in these scripts: 
-- [create_jobs.py](https://github.com/mathoptdev/examples/blob/main/examples/create_jobs.py)
-- [queue_jobs.py](https://github.com/mathoptdev/examples/blob/main/examples/queue_jobs.py)
+- [create_jobs.py](https://github.com/laroccacharly/mathoptdev/blob/main/examples/create_jobs.py)
+- [queue_jobs.py](https://github.com/laroccacharly/mathoptdev/blob/main/examples/queue_jobs.py)
 
 # Monitor your jobs
 You can monitor your jobs with:
@@ -112,4 +112,4 @@ body = {
 opt.send_request(body) 
 ```
 There is a full example at the link: 
-[download_solutions.py](https://github.com/mathoptdev/examples/blob/main/examples/download_solutions.py)
+[download_solutions.py](https://github.com/laroccacharly/mathoptdev/blob/main/examples/download_solutions.py)
