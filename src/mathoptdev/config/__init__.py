@@ -1,7 +1,7 @@
 import os
 
 # Default to development configuration
-env = os.environ.get("MATHOPT_ENV", "dev")
+env = os.environ.get("MATHOPT_ENV", "prod")
 
 if env == "prod":
     from .prod import *
