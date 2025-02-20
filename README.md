@@ -112,4 +112,4 @@ body = {
 opt.send_request(body) 
 ```
 There is a full example at the link: 
-[download_solutions.py](https://github.com/laroccacharly/mathoptdev/blob/main/examples/download_solutions.py)
+[download_solutions.py](https://github.com/laroccacharly/mathoptdev/blob/main/examples/download_solution.py)
