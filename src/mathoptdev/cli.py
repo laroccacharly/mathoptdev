@@ -1,6 +1,7 @@
 import click
 
 from .login import login as login_command
+from .logout import logout as logout_command
 from .collection import create_collection as create_collection_command
 from .send_request import send_request
 from .instance_generator.tsp import TSPInstanceSchema, generate_tsp_mps
@@ -15,6 +16,11 @@ def cli():
 @cli.command()
 def login():
     login_command()
+
+@cli.command()
+def logout():
+    """Log out by removing the API token from the .env file."""
+    logout_command()
 
 @cli.command()
 def user():
