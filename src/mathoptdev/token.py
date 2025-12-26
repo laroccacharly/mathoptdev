@@ -8,12 +8,14 @@ def get_stored_token() -> str | None:
     # First check if token is in environment
     token = os.getenv(MATHOPT_API_TOKEN_NAME)
     if token:
+        print(f"Token found in environment variable {MATHOPT_API_TOKEN_NAME}")
         return token
         
     # If not found, try loading from .env file
     load_dotenv()
     token = os.getenv(MATHOPT_API_TOKEN_NAME)
     if token:
+        print(f"Token found in .env file {MATHOPT_API_TOKEN_NAME}")
         return token    
     
     raise ValueError(f"API token not found. Please set the {MATHOPT_API_TOKEN_NAME} environment variable or run `opt login`.")
