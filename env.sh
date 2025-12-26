@@ -6,6 +6,7 @@ alias downloadsolution="uv run examples/download_solution.py"
 alias build="uv build"
 alias publish="uv publish"
 alias opt="uv run opt" 
+alias push="uv publish --username '__token__'--password $UV_PUBLISH_TOKEN"
 
 alias setdev="export MATHOPT_ENV=dev"
 alias setprod="export MATHOPT_ENV=prod"
